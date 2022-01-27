@@ -22,7 +22,7 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState();
   const navigate = useNavigate();
-  const error404 = "404: Page Not Found!";
+  const error404 = "Oppps! The Page Was Not Found!";
 
   /**
    * Hook that runs once on render and stores default data
