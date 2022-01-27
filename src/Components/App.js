@@ -2,19 +2,19 @@
 import React, { useState, useEffect } from "react";
 // React Router Dom
 import { Routes, Route, useNavigate } from "react-router-dom";
-// Axios
+// Axios (Fetch API)
 import axios from "axios";
 // CSS
 import "../css/index.css";
 import "../css/styles.css";
 // App Components
 import apiKey from "./config";
-import NotFound from "./NotFound";
 import PhotosContainer from "./PhotosContainer";
 import Header from "./Header";
 import Error from "./Error";
 
 const App = () => {
+  // State
   const [data, setData] = useState([]);
   const [orcas, setOrcas] = useState([]);
   const [jeep, setJeep] = useState([]);
@@ -24,12 +24,20 @@ const App = () => {
   const navigate = useNavigate();
   const error404 = "404: Page Not Found!";
 
+  /**
+   * Hook that runs once on render and stores default data
+   */
   useEffect(() => {
     preformSearch("moraine-lake");
     preformSearch("orcas");
     preformSearch("jeep");
   }, []);
 
+  /**
+   * createURL() takes a search query and returns the flickr api request url
+   * @param {string} query - search query
+   * @returns
+   */
   const createURL = (query) => {
     const limit = 24,
       pages = 1,
@@ -38,6 +46,10 @@ const App = () => {
     return `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${query}&per_page=${limit}&page=${pages}&format=${format}&nojsoncallback=1`;
   };
 
+  /**
+   * preformSearch() takes a search query and fetches data from the flickr api using axios. Then stores the data in state based on the search.
+   * @param {string} query - search query
+   */
   const preformSearch = (query) => {
     setLoading(true); // so that loading animation renders on each search
     axios
@@ -73,6 +85,7 @@ const App = () => {
     <>
       <Header onSearch={preformSearch} />
       <Routes>
+        // Home Route
         <Route
           path="/"
           element={
@@ -83,6 +96,7 @@ const App = () => {
             />
           }
         />
+        // Default Search Route - Moraine Lake
         <Route
           path="/moraine-lake"
           element={
@@ -93,6 +107,7 @@ const App = () => {
             />
           }
         />
+        // Default Search Route - Orcas
         <Route
           path="/orcas"
           element={
@@ -103,6 +118,7 @@ const App = () => {
             />
           }
         />
+        // Default Search Route - Jeep
         <Route
           path="/jeep"
           element={
@@ -113,6 +129,7 @@ const App = () => {
             />
           }
         />
+        // Search Route
         <Route
           path="/search/:query"
           element={
@@ -123,7 +140,9 @@ const App = () => {
             />
           }
         />
+        // Error Route
         <Route path="/error" element={<Error error={error} />} />
+        // 404 Error Route
         <Route path="/*" element={<Error error={error404} />} />
       </Routes>
     </>

@@ -1,5 +1,10 @@
+// React
 import React from "react";
 
+/**
+ * ErrorIcon Component
+ * @returns - Error Icon SVG
+ */
 const ErrorIcon = () => {
   return (
     <svg width="128" height="128" viewBox="0 0 100 100">

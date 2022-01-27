@@ -1,5 +1,10 @@
+// React
 import React from "react";
 
+/**
+ * SearchIcon Component
+ * @returns - Returns Search Icon SVG
+ */
 const SearchIcon = () => {
   return (
     <svg

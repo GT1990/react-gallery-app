@@ -1,6 +1,12 @@
+// React
 import React from "react";
+// React Router Dom
 import { NavLink } from "react-router-dom";
 
+/**
+ * Nav Component
+ * @returns - Defaut Nav Links
+ */
 const Nav = () => {
   const linksData = [
     {
@@ -17,6 +23,10 @@ const Nav = () => {
     },
   ];
 
+  /**
+   * links() Loops through and array and creates NavLinks
+   * @returns - Returns a Nav link for each object in the linksData array
+   */
   const links = () => {
     let navLinks = [];
     linksData.forEach((link, index) => {

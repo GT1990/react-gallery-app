@@ -1,5 +1,10 @@
+// React
 import React from "react";
 
+/**
+ * NotFound Component
+ * @returns - Returns No Results Found message
+ */
 const NotFound = () => {
   return (
     <li className="not-found">
