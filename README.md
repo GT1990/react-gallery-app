@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# react-gallery-app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    A react application that retrieves images from the flickr api.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+## Examples
 
-### `npm start`
+![Example](src/img/ss1.png)
+![Example](src/img/ss2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### App.js
 
-### `npm test`
+    Main entry point of the application. Uses axios to fetch data from the flicker api.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Header.js
 
-### `npm run build`
+    Renders the SearchForm and Nav Links
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### SearchForm.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Allows the user to search for specific images
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Nav.js
 
-### `npm run eject`
+    Default search page links of the application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### PhotoContainer.js
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Recieves data from the api passed down as props and displays images using the Photo.js componenet.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Error.js
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Displays error message 404 or server error depending on the error.
 
-## Learn More
+### Loading.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Loading animation while application retrieves and displays images.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### NotFound.js
 
-### Code Splitting
+    Displays no results found.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### config.js
 
-### Analyzing the Bundle Size
+    In the .gitignore files MUST provide your own config.js file with your own flickr api key variable. Export the apiKey to allow App.js component to import it and use it to retrieve data from the api.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## CSS
 
-### Making a Progressive Web App
+### styles.css
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Contains my custom css styles
