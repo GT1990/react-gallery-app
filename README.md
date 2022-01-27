@@ -4,6 +4,22 @@
 
 ## Table of Contents
 
+- [react-gallery-app](#react-gallery-app)
+  - [Table of Contents](#table-of-contents)
+  - [Examples](#examples)
+  - [Components](#components)
+    - [App.js](#appjs)
+    - [Header.js](#headerjs)
+    - [SearchForm.js](#searchformjs)
+    - [Nav.js](#navjs)
+    - [PhotoContainer.js](#photocontainerjs)
+    - [Error.js](#errorjs)
+    - [Loading.js](#loadingjs)
+    - [NotFound.js](#notfoundjs)
+    - [config.js](#configjs)
+  - [CSS](#css)
+    - [styles.css](#stylescss)
+
 ## Examples
 
 ![Example](src/img/ss1.png)
