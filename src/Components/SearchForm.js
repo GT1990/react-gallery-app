@@ -15,6 +15,7 @@ const SearchForm = ({ onSearch }) => {
   const inputRef = React.createRef();
   // Hook to redirect route
   const navigate = useNavigate();
+
   /**
    * handleSubmit()
    * 1. Prevents the default submit action

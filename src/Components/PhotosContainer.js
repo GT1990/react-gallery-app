@@ -23,6 +23,14 @@ const PhotosContainer = ({ data, loading, onSearch }) => {
     if (data.length === 0 && query) {
       onSearch(query);
     }
+    /* 
+    This gets called when the browser's back and forward page buttons are triggered
+    This keeps the search route urls in sync with the photos displayed
+    */
+    window.onpopstate = function (event) {
+      const path = event.path[0].location.pathname.replace("/search/", "");
+      onSearch(path);
+    };
   }, []);
 
   /**
