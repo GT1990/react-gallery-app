@@ -51,7 +51,6 @@ const App = () => {
    * @param {string} query - search query
    */
   const preformSearch = (query) => {
-    console.log("NEW SEARCH: ", query);
     setLoading(true); // so that loading animation renders on each search
     axios
       .get(createURL(query))
