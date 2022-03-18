@@ -4,9 +4,6 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
 // Axios (Fetch API)
 import axios from "axios";
-// CSS
-import "../css/index.css";
-import "../css/styles.css";
 // App Components
 import apiKey from "./config";
 import PhotosContainer from "./PhotosContainer";
