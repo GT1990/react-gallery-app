@@ -30,7 +30,7 @@ const SearchForm = ({ onSearch }) => {
     const input = inputRef.current.value;
     onSearch(input);
     e.currentTarget.reset();
-    navigate(`/react-gallery-app/search/${input}`);
+    navigate(`/search/${input}`);
   };
 
   return (

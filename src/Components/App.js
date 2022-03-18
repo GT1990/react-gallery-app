@@ -74,7 +74,7 @@ const App = () => {
         const error = "There was an error with the server, please try again.";
         setError(error);
         setLoading(false);
-        navigate("/react-gallery-app/error");
+        navigate("/error");
       });
   };
 
@@ -84,7 +84,7 @@ const App = () => {
       <Routes>
         // Home Route
         <Route
-          path="/react-gallery-app"
+          path="/"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -95,7 +95,7 @@ const App = () => {
         />
         // Default Search Route - Moraine Lake
         <Route
-          path="/react-gallery-app/moraine-lake"
+          path="/moraine-lake"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -106,7 +106,7 @@ const App = () => {
         />
         // Default Search Route - Orcas
         <Route
-          path="/react-gallery-app/orcas"
+          path="/orcas"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -117,7 +117,7 @@ const App = () => {
         />
         // Default Search Route - Jeep
         <Route
-          path="/react-gallery-app/jeep"
+          path="/jeep"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -128,7 +128,7 @@ const App = () => {
         />
         // Search Route
         <Route
-          path="/react-gallery-app/search/:query"
+          path="/search/:query"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -138,10 +138,7 @@ const App = () => {
           }
         />
         // Error Route
-        <Route
-          path="/react-gallery-app/error"
-          element={<Error error={error} />}
-        />
+        <Route path="/error" element={<Error error={error} />} />
         // 404 Error Route
         <Route path="/*" element={<Error error={error404} />} />
       </Routes>
