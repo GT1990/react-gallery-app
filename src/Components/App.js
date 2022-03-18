@@ -1,7 +1,7 @@
 // React
 import React, { useState, useEffect } from "react";
 // React Router Dom
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 // Axios (Fetch API)
 import axios from "axios";
 // App Components
