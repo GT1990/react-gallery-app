@@ -10,15 +10,15 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   const linksData = [
     {
-      path: "/jeep",
+      path: "/react-gallery-app/jeep",
       text: "Jeep",
     },
     {
-      path: "/moraine-lake",
+      path: "/react-gallery-app/moraine-lake",
       text: "Moraine Lake",
     },
     {
-      path: "/orcas",
+      path: "/react-gallery-app/orcas",
       text: "Orcas",
     },
   ];
