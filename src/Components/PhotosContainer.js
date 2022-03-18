@@ -28,7 +28,10 @@ const PhotosContainer = ({ data, loading, onSearch }) => {
     This keeps the search route urls in sync with the photos displayed
     */
     window.onpopstate = function (event) {
-      const path = event.path[0].location.pathname.replace("/search/", "");
+      const path = event.path[0].location.pathname.replace(
+        "/react-gallery-app/search/",
+        ""
+      );
       onSearch(path);
     };
   }, []);

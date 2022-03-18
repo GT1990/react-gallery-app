@@ -87,7 +87,7 @@ const App = () => {
       <Routes>
         // Home Route
         <Route
-          path="/"
+          path="/react-gallery-app"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -98,7 +98,7 @@ const App = () => {
         />
         // Default Search Route - Moraine Lake
         <Route
-          path="/moraine-lake"
+          path="/react-gallery-app/moraine-lake"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -109,7 +109,7 @@ const App = () => {
         />
         // Default Search Route - Orcas
         <Route
-          path="/orcas"
+          path="/react-gallery-app/orcas"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -120,7 +120,7 @@ const App = () => {
         />
         // Default Search Route - Jeep
         <Route
-          path="/jeep"
+          path="/react-gallery-app/jeep"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -131,7 +131,7 @@ const App = () => {
         />
         // Search Route
         <Route
-          path="/search/:query"
+          path="/react-gallery-app/search/:query"
           element={
             <PhotosContainer
               onSearch={preformSearch}
@@ -141,7 +141,10 @@ const App = () => {
           }
         />
         // Error Route
-        <Route path="/error" element={<Error error={error} />} />
+        <Route
+          path="/react-gallery-app/error"
+          element={<Error error={error} />}
+        />
         // 404 Error Route
         <Route path="/*" element={<Error error={error404} />} />
       </Routes>
